@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/rhel5pdi/home/anwa/workspace/brazil/src/AnimaticsFlashImportScripts/scripts/rename-background-psds'
+let g:netrw_dirhist_2='/rhel5pdi/home/anwa/workspace/brazil/src/AnimaticsWebsite/rails-root/app/assets/stylesheets'
+let g:netrw_dirhist_3='/rhel5pdi/home/anwa/workspace/brazil/src/AnimaticsWebsite/rails-root/config'
+let g:netrw_dirhist_4='/rhel5pdi/home/anwa/workspace/brazil/src/AnimaticsWebsite/rails-root/lib/assets/javascripts/undo'
