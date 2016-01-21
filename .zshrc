@@ -6,3 +6,6 @@ autoload -Uz compinit colors
 colors
 compinit
 export EDITOR=vim
+export PROMPT='%~ %# '
+
+
