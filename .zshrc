@@ -5,3 +5,4 @@ bindkey -e
 autoload -Uz compinit colors
 colors
 compinit
+export EDITOR=vim
