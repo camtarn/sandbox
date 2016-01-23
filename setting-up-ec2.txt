@@ -1,0 +1,29 @@
+# Login as ubuntu
+
+sudo mkdir /home/<USERNAME>
+cd /home/<USERNAME>
+sudo useradd <USERNAME>
+sudo chown <USERNAME> .
+sudo cp -r ~/.ssh .
+sudo chown -R <USERNAME> .ssh
+export EDITOR=vim
+sudo visudo
+# At bottom of file, insert: '<USERNAME> ALL=(ALL) NOPASSWD:ALL'
+
+# Login as <USERNAME>
+
+sudo apt-get install -y zsh git
+git clone https://github.com/camtarn/sandbox
+ln -s sandbox/.zshrc
+ln -s sandbox/.vim
+ln -s sandbox/.vimrc
+
+# Theoretically you should be able to change shell for yourself without sudo -
+# however, I found it asked for a password, which of course this account does
+# not have.
+sudo chsh -s /usr/bin/zsh <USERNAME>
+
+# Exit and login again
+
+curl -sL https://deb.nodesource.com/setup_5.x | sudo -E bash -
+sudo apt-get install -y nodejs

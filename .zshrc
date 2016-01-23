@@ -1,4 +1,4 @@
-HISTFILE=~/.histfile
+HISTFILE=~/.history
 HISTSIZE=10000
 SAVEHIST=8000
 bindkey -e
