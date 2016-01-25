@@ -1,0 +1,12 @@
+# Yeoman angular generator installs a Compass plugin, but doesn't warn you
+# that you'll need a separate Compass gem to use it
+sudo gem install sass
+sudo gem install compass
+
+# Had issues with yeoman angular generator automatically adding karma to the
+# gruntfile, but without actually installing Karma (sigh). Edited gruntfile to
+# remove it.
+
+# Had issues with 'ENOENT in file app/images/yeoman.png'. This fixed it:
+npm uninstall grunt-contrib-imagemin
+npm install grunt-contrib-imagemin

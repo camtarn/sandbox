@@ -25,5 +25,11 @@ sudo chsh -s /usr/bin/zsh <USERNAME>
 
 # Exit and login again
 
+# This is the tutorial I was following:
+# https://www.digitalocean.com/community/tutorials/how-to-set-up-a-node-js-application-for-production-on-ubuntu-14-04
+
 curl -sL https://deb.nodesource.com/setup_5.x | sudo -E bash -
-sudo apt-get install -y nodejs ruby ruby-dev
+sudo apt-get install -y nodejs ruby ruby-dev nginx
+sudo vim /etc/nginx/sites-available/default
+# See minimal-nginx-config.txt
+
