@@ -9,3 +9,4 @@ export EDITOR=vim
 export PROMPT='%~ %# '
 alias ls='ls --color=auto'
 
+grepr () { grep -r $* . }
