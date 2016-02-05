@@ -38,6 +38,7 @@ set laststatus=2
 set autochdir
 set ssop-=options " do not store global and local values in a session
 set fileformats=unix,dos
+set directory=~/.vimtmp/
 
 " nnoremap / /\v
 " vnoremap / /\v
