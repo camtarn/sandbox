@@ -30,7 +30,7 @@ set smartcase
 set hidden
 set wildmenu
 set wildmode=list:longest
-set wildignore+=*/tmp/*,*/source_maps/*
+set wildignore+=*/tmp/*,*/source_maps/*,*/node_modules/*,*/bower_components/*
 set ttyfast
 set number
 set backspace=indent,eol,start
