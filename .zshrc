@@ -10,3 +10,7 @@ export PROMPT='%~ %# '
 alias ls='ls --color=auto'
 
 grepr () { grep -r $* . }
+
+export PYTHONDONTWRITEBYTECODE=1
+
+alias s='cd sme/subsea-to-shore'
