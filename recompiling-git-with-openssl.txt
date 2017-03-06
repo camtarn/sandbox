@@ -1,0 +1,32 @@
+sudo apt-get update
+sudo apt-get install build-essential dpkg-dev libcurl4-openssl-dev libpcre3-dev unzip libexpat1-dev gettext
+sudo apt-get --no-install-recommends install asciidoc xmlto
+sudo apt-get build-dep git
+
+If apt complains about missing source repo:
+sudo vim /etc/apt/sources.list
+Add deb-src version of main repo if it isn't there
+
+mkdir ~/git-openssl
+cd ~/git-openssl
+apt-get source git
+dpkg-source -x git_1.7.9.5-1.dsc
+cd git-1.7.9.5
+
+(Remember to replace 1.7.9.5 with the actual version of git in your system.)
+
+Then, edit debian/control file (run the command: gksu gedit debian/control) and replace all instances of libcurl4-gnutls-dev with libcurl4-openssl-dev.
+
+Then build the package (if it's failing on test, you can remove the line TEST=test from the file debian/rules):
+
+sudo dpkg-buildpackage -b -d
+
+This is as far as I got, because either Git's build scripts are faulty, or I was violating some assumption - either way, there was an invalid command and the whole thing came crashing down, grr.
+
+---
+
+Install new package:
+
+i386:  sudo dpkg -i ../git_1.7.9.5-1_i386.deb
+
+x86_64: sudo dpkg -i ../git_1.7.9.5-1_amd64.deb
