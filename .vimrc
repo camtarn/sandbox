@@ -79,7 +79,7 @@ nnoremap <c-p> :CtrlPMixed<cr>
 "highlight DebugCommands ctermbg=yellow guibg=yellow ctermfg=black guifg=black
 "match DebugCommands /console\.\w\+/
 "autocmd BufWinEnter,InsertEnter,InsertLeave *.coffee match DebugCommands /console\.\w\+/
-inoremap clog console.log 
-inoremap _of <ESC>T_yeA_.fetch( options, '<ESC>pA' )
+"inoremap clog console.log 
+"inoremap _of <ESC>T_yeA_.fetch( options, '<ESC>pA' )
 
 " Tip! Use ':verbose set cindent?' to check where cindent last got set from.
